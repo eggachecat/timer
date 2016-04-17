@@ -1,0 +1,91 @@
+
+<div class="box"  ng-keydown="keyDown($event)">
+	<md-content class="md-padding question-area">
+		<md-tabs md-border-bottom md-selected="tabState">
+			<md-tab id="tab1">
+				<md-tab-label>Question One</md-tab-label>
+
+				<md-tab-body>
+					<h1 class="md-display-2">你父母親的平均年齡？</h1>
+					<form ng-submit="next()">
+					  	<md-input-container md-no-float class="focused">
+							<input class="md-focused" ng-model="data.ages" type="text" autofocus="tabState == 0">				
+						</md-input-container>
+					  	<md-button type='submit'>next</md-button>
+					</form>
+
+				</md-tab-body>
+			</md-tab>
+			<md-tab id="tab2">
+				<md-tab-label>Question Two</md-tab-label>
+				<md-tab-body>
+					<h1 class="md-display-2">你平均每年回家次數？</h1>
+					<form ng-submit="toAudio()">
+					  	<md-input-container md-no-float>
+							<input class="md-focused" ng-model="data.times" type="text" autofocus="tabState == 1">				
+						</md-input-container>
+					  	<md-button type='submit'>submit</md-button>
+					</form>
+					
+				</md-tab-body>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+	<div keyBoard>
+		 <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+		      <md-button key="1" class="md-raised"  md-ink-ripple>1</md-button>
+		      <md-button key="2" class="md-raised">2</md-button>
+		      <md-button key="3" class="md-raised">3</md-button>
+		 </section>
+		  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+		      <md-button key="4" class="md-raised">4</md-button>
+		      <md-button key="5" class="md-raised">5</md-button>
+		      <md-button key="6" class="md-raised">6</md-button>
+		 </section>
+		  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+		      <md-button key="7" class="md-raised">7</md-button>
+		      <md-button key="8" class="md-raised">8</md-button>
+		      <md-button key="9" class="md-raised">9</md-button>
+		 </section>
+		  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+		      <md-button key="clear" class="md-raised">Clear</md-button>
+		      <md-button key="0" class="md-raised">0</md-button>
+		      <md-button key="enter" class="md-raised">Enter</md-button>
+		 </section>
+	</div>
+	
+</div>
+<style type="text/css">
+ 	div[keyBoard] .md-button {
+ 		width: 80px;
+ 		height: 60px;
+ 	}
+ 	div[keyBoard] {
+ 		margin-top: 80px;
+ 	}
+ 	.question-area {
+ 		width: 50%;
+ 		height: 360px;
+ 		margin-top: 80px;
+ 	/*	float: left;*/
+ 		margin: auto;
+ 		font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+ 	}
+ 	.question-area input[type="text"] {
+ 		font-size: 60px;
+	    width: 700px;
+	    line-height: 90px;
+	    height: 80px;
+
+ 	}
+ 	.box {
+ 		padding: 10px;
+ 		padding-top: 80px;
+ 	}
+ 	.box md-content {
+ 		height: 330px;
+ 	}
+ 	md-tabs {
+ 		height: 100% !important;
+ 	}
+ </style>
